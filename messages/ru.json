@@ -1,0 +1,9 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Привет, {name} из локали ru!",
+	"welcome": "Добро пожаловать в Project GDL!",
+	"easy_to_use": "Лёгкий в использовании дистрибутив Linux.",
+	"install_software": "Простая установка программ!",
+	"install_software_subtitle": "Нажал - и готово!",
+	"open_pamac": "Открыть менеджер пакетов Pamac"
+}

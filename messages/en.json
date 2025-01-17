@@ -1,0 +1,9 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from en!",
+	"welcome": "Welcome to Project GDL!",
+	"easy_to_use": "Easy-to-use Linux Distribution.",
+	"install_software": "Software installation is easy!",
+	"install_software_subtitle": "Just click and install.",
+	"open_pamac": "Open Pamac Software Manager"
+}
