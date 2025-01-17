@@ -36,6 +36,8 @@
 	})
 </script>
 
+<title>ProjectGDL OOBE</title>
+
 <ParaglideJS {i18n}>
 	{@render children()}
 </ParaglideJS>
