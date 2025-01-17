@@ -1,3 +1,5 @@
+// @ts-ignore
+import { spawn } from 'node:child_process';
 import { userInfo } from 'os';
 import { writeFile } from 'fs/promises';
 import type { RequestHandler } from './$types';
@@ -22,6 +24,12 @@ VariantList=,`
     const filePath = `/home/${username}/.config/kxkbrc`;
 
     await writeFile(filePath, content);
+
+    spawn('dbus-send', [
+        ' --session', '--type=signal', '--reply-timeout=100', 
+        '--dest=org.kde.keyboard', '/Layouts', 
+        'org.kde.keyboard.reloadConfig'
+    ]); // dbus fuckage
 
     return new Response();
 };
