@@ -27,5 +27,6 @@
 	"layouts": "Keyboard layouts",
 	"layouts_subtitle": "Select your keyboard layouts:",
 	"finished": "All done!",
-	"finished_subtitle": "You can now use your system."
+	"finished_subtitle": "You can now use your system.",
+	"you_can_reboot": "You can reboot if you want"
 }
