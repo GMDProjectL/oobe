@@ -1,6 +1,11 @@
 <script lang="ts">
     import * as m from '$lib/paraglide/messages.js';
 	import { GDLButton, GDLPage, GDLTitle, GDLSubtitle, GDLcc } from "$lib";
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        fetch('/finished/remove-from-autostart')
+    });
 </script>
 
 <GDLPage>
