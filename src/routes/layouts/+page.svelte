@@ -15,6 +15,23 @@
 
     console.log(layouts);
 
+    const setLayouts = async() => {
+        return await Promise.all([
+                fetch('/layouts/set-kde-layouts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    selectedLayouts
+                })
+            }),
+                fetch('/layouts/set-gnome-layouts', {
+                method: 'POST',
+                body: JSON.stringify({
+                    selectedLayouts
+                })
+            })
+        ])
+    }
+
 </script>
 
 <GDLPage>
@@ -38,12 +55,7 @@
                 <div class="mb-5"></div>
             {/each}
         </div>
-        <GDLButton secondary on:click={() => fetch('/layouts/set-kde-layouts', {
-            method: 'POST',
-            body: JSON.stringify({
-                selectedLayouts
-            })
-        }).then(() => {
+        <GDLButton secondary on:click={() => setLayouts().then(() => {
             navigateTo('/finished');
         })}>
             {m.next()}
