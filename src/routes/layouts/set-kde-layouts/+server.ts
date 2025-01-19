@@ -26,7 +26,7 @@ VariantList=,`
     await writeFile(filePath, content);
 
     spawn('dbus-send', [
-        ' --session', '--type=signal', '--reply-timeout=100', 
+        '--session', '--type=signal', '--reply-timeout=100', 
         '--dest=org.kde.keyboard', '/Layouts', 
         'org.kde.keyboard.reloadConfig'
     ]); // dbus fuckage
