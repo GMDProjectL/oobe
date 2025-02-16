@@ -47,7 +47,15 @@
             fetch("/open-pamac/package/vesktop")
         }}>
             <Icon class="me-3" icon="ic:baseline-discord" width="24" height="24" />
-            Vesktop (Discord)
+            Vesktop
+        </GDLButton>
+
+        
+        <GDLButton on:click={() => {
+            fetch("/open-pamac/package/discord")
+        }}>
+            <Icon class="me-3" icon="ic:baseline-discord" width="24" height="24" />
+            Discord
         </GDLButton>
 
         
