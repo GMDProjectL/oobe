@@ -28,7 +28,7 @@
 
         
         <GDLButton on:click={() => {
-            fetch("/open-pamac/flatpak/com.obsproject.Studio")
+            fetch("/open-pamac/package/obs-studio")
         }}>
             <Icon class="me-3" icon="simple-icons:obsstudio" width="24" height="24" />
             OBS Studio
