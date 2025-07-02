@@ -59,26 +59,6 @@
         </GDLButton>
 
         
-        <GDLButton on:click={async() => {
-            const result = await Swal.fire({
-                title: m.nekoray_warning(),
-                html: m.nekoray_warning_text(),
-                icon: 'warning',
-                showCancelButton: true,
-                background: '#222',
-                color: 'white',
-                confirmButtonColor: '#333',
-                cancelButtonText: m.back()
-            });
-            if (result.isConfirmed) {
-                fetch("/open-pamac/package/nekoray")
-            }
-        }}>
-            <Icon class="me-3" icon="arcticons:nekobox" width="24" height="24" />
-            Nekoray (VPN)
-        </GDLButton>
-
-        
         <GDLButton on:click={() => {
             fetch("/open-pamac/package/kdenlive")
         }}>
