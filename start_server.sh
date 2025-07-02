@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npm run dev
+pnpm preview
