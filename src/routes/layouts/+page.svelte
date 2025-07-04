@@ -32,6 +32,21 @@
         ])
     }
 
+    const openKdeSettings = async() => {
+        await fetch('/layouts/open-kde-settings');
+    }
+
+    const openGnomeSettings = async() => {
+        await fetch('/layouts/open-gnome-settings');
+    }
+
+    const openInSettings = async() => {
+        await Promise.all([
+            openKdeSettings(),
+            openGnomeSettings()
+        ]);
+    }
+
 </script>
 
 <GDLPage>
@@ -39,25 +54,11 @@
     <GDLSubtitle>{m.layouts_subtitle()}</GDLSubtitle>
 
     <GDLcc orientation="vertical">
-        <div class="h-96 overflow-y-auto">
-            {#each layouts as layout}
-                <GDLButton secondary={selectedLayouts.includes(layout.code)}
-                on:click={() => {
-                    if (selectedLayouts.includes(layout.code)) {
-                        selectedLayouts = selectedLayouts.filter(code => code !== layout.code);
-                    }
-                    else {
-                        selectedLayouts = [...selectedLayouts, layout.code];
-                    }
-                }}>
-                    { layout.name }
-                </GDLButton>
-                <div class="mb-5"></div>
-            {/each}
-        </div>
-        <GDLButton secondary on:click={() => setLayouts().then(() => {
-            navigateTo('/finished');
-        })}>
+        <GDLButton on:click={() => openInSettings()}>
+            <Icon class="me-3" icon="mdi:settings" width="24" height="24" />
+            {m.open_in_settings()}
+        </GDLButton>
+        <GDLButton secondary on:click={() => navigateTo('/finished') }>
             {m.next()}
         </GDLButton>
     </GDLcc>
