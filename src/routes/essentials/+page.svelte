@@ -36,30 +36,6 @@
 
         
         <GDLButton on:click={() => {
-            fetch("/open-pamac/package/gpu-screen-recorder-gtk")
-        }}>
-            <Icon class="me-3" icon="mdi:gpu" width="24" height="24" />
-            GPU Screen Recorder
-        </GDLButton>
-
-        
-        <GDLButton on:click={() => {
-            fetch("/open-pamac/package/vesktop")
-        }}>
-            <Icon class="me-3" icon="ic:baseline-discord" width="24" height="24" />
-            Vesktop
-        </GDLButton>
-
-        
-        <GDLButton on:click={() => {
-            fetch("/open-pamac/package/discord")
-        }}>
-            <Icon class="me-3" icon="ic:baseline-discord" width="24" height="24" />
-            Discord
-        </GDLButton>
-
-        
-        <GDLButton on:click={() => {
             fetch("/open-pamac/package/kdenlive")
         }}>
             <Icon class="me-3" icon="simple-icons:kdenlive" width="24" height="24" />
