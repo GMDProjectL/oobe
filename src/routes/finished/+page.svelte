@@ -14,7 +14,10 @@
 
     <GDLcc orientation="vertical">
         <div class="w-96"></div>
-        <GDLButton secondary on:click={() => window.close()}>
+        <GDLButton secondary on:click={() => {
+                        fetch('/quit')
+                        window.close();
+                    }}>
             {m.done()}
         </GDLButton>
         <GDLButton on:click={() => fetch("/finished/reboot")}>
